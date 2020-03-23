@@ -1,9 +1,9 @@
 var validTypes = [
-  "shell",
-  "hyperdrive",
-  "computer",
-  "life support",
-  "landing gear",
+  'shell',
+  'hyperdrive',
+  'computer',
+  'life support',
+  'landing gear',
   undefined
 ];
 
@@ -20,19 +20,11 @@ class Part {
     this.value = obj.value;
     this.broken = false;
   }
+
   isValid() {
-    if (!this.name || !this.type || !this.value) {
-      return false;
-    } else {
-      return true;
+    return (!this.name || !this.type || !this.value) ? false : true;
     }
-  }
+
 }
 
 module.exports = Part;
-
-
-// isValid(obj) {
-//   (this.type = validTypes) ? true : false;
-//   return this.isValid;
-// }
